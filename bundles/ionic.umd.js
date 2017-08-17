@@ -33320,7 +33320,7 @@ AlertCmp.decorators = [
                     '<h3 id="{{subHdrId}}" class="alert-sub-title" *ngIf="d.subTitle" [innerHTML]="d.subTitle"></h3>' +
                     '</div>' +
                     '<div id="{{msgId}}" class="alert-message" [innerHTML]="d.message"></div>' +
-                    '<div *ngIf="d.inputs.length" [ngSwitch]="inputType">' +
+                    '<div *ngIf="d.inputs && d.inputs.length" [ngSwitch]="inputType">' +
                     '<ng-template ngSwitchCase="radio">' +
                     '<div class="alert-radio-group" role="radiogroup" [attr.aria-labelledby]="hdrId" [attr.aria-activedescendant]="activeId">' +
                     '<button ion-button="alert-radio-button" *ngFor="let i of d.inputs" (click)="rbClick(i)" [attr.aria-checked]="i.checked" [disabled]="i.disabled" [attr.id]="i.id" class="alert-tappable alert-radio" role="radio">' +
@@ -33349,7 +33349,7 @@ AlertCmp.decorators = [
                     '</div>' +
                     '</ng-template>' +
                     '</div>' +
-                    '<div class="alert-button-group" [ngClass]="{\'alert-button-group-vertical\':d.buttons.length>2}">' +
+                    '<div class="alert-button-group" [ngClass]="{\'alert-button-group-vertical\':d.buttons && d.buttons.length>2}">' +
                     '<button ion-button="alert-button" *ngFor="let b of d.buttons" (click)="btnClick(b)" [ngClass]="b.cssClass">' +
                     '{{b.text}}' +
                     '</button>' +
