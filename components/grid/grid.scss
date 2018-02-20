@@ -64,8 +64,6 @@ $grid-padding-widths: (
 @include assert-ascending($grid-max-widths, "$grid-max-widths");
 
 
-@if ($include-component-grid == true) {
-
 // Grid
 // --------------------------------------------------
 
@@ -92,5 +90,3 @@ $grid-padding-widths: (
 }
 
 @include make-grid-columns();
-
-}
